@@ -1,4 +1,4 @@
-<!-- get it through vbase-3-setup -->
+<!-- get it through vbase-3-setup (type out the whole thing) -->
 
 <template>
     <h1>{{ count }}</h1>
