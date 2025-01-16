@@ -1,18 +1,25 @@
 <template>
     <div>
-        <form action="submit">
-            <input type="text" v-model="user.username" placeholder="Enter a Username">
-            <input type="text" v-model="user.password" placeholder="Enter a Username">
-            <button type="submit" @click="signUp">Sign Up</button>
+        <form @submit.prevent="signUp">
+            <label for="username">Username: </label>
+            <input type="text" id="username" v-model="user.username" placeholder="Enter a Username">
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" v-model="user.password" placeholder="Enter a Password">
+            <br>
+            <button action="submit">Sign Up</button>
         </form>
     </div>
 </template>
 
 <script setup>
-let user = {username: "", password: ""};
+import { reactive } from 'vue';
+
+let user = reactive({username: "", password: ""});
 function signUp() {
-    console.log(user)
+    console.log(user.username, user.password);
 }
+
 </script>
 
 <style scoped>
