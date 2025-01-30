@@ -1,21 +1,12 @@
-<!-- get it through vbase-3-setup (type out the whole thing) -->
-
-
-<!-- counter window -->
 <template>
-    <h1>{{ count }}</h1>
-    <button @click="increment">Click Me</button>
+    <div>
+        <AnimalCard v-for="animal in animals" :key="animal.name" :animal="animal" />
+    </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-
-
-let count = ref(0);     //also works without semicolons
-function increment() {
-    count.value++;
-}
-
+import AnimalCards from '@/components/AnimalCards.vue';
+const animals = [{name: "Walrus", image: "url"}, {name: "Mark Fridlin", image: "url1"}];
 </script>
 
 <style scoped>

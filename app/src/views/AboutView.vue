@@ -1,15 +1,15 @@
 <template>
   <div>
-    <!-- <NewList /> -->
-    <SignIn />
+      <AnimalCard v-for="animal in animals" :key="animal.name" :animal="animal" />
+      <LogIn :message="message" />
   </div>
 </template>
 
 <script setup>
-import SignIn from '@/components/SignIn.vue';
-
-    // if setup error => copy and paste everything again after deleting everything
-//import NewList from '../components/NewList.vue';
+import AnimalCard from '@/components/AnimalCards.vue';
+import LogIn from '@/components/LogIn.vue';
+const message = "Hello World!";
+const animals = [{name: "Walrus", image: "url"}, {name: "Mark Fridlin", image: "url1"}];
 
 </script>
 
