@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import AnimalCard from '@/components/AnimalCards.vue';
+import AnimalCard from '@/components/Cards.vue';
 import LogIn from '@/components/LogIn.vue';
 const message = "Hello World!";
 const animals = [{name: "Walrus", image: "url"}, {name: "Mark Fridlin", image: "url1"}];
